@@ -1,0 +1,51 @@
+{
+  "name": "astro-planning-poker",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "devDependencies": {
+    "@astrojs/mdx": "^0.11.3",
+    "@astrojs/react": "^1.1.4",
+    "@astrojs/tailwind": "^2.0.2",
+    "@tailwindcss/typography": "^0.5.7",
+    "@types/cookie": "^0.5.1",
+    "astro": "^1.4.2",
+    "sass": "^1.55.0"
+  },
+  "dependencies": {
+    "@analogjs/astro-angular": "^0.1.0-beta.2",
+    "@angular-devkit/build-angular": "^14.2.4",
+    "@angular/animations": "^14.2.4",
+    "@angular/common": "^14.2.4",
+    "@angular/compiler": "^14.2.4",
+    "@angular/compiler-cli": "^14.2.4",
+    "@angular/core": "^14.2.4",
+    "@angular/language-service": "^14.2.4",
+    "@angular/platform-browser": "^14.2.4",
+    "@angular/platform-browser-dynamic": "^14.2.4",
+    "@angular/platform-server": "^14.2.4",
+    "@astrojs/markdown-component": "^1.0.1",
+    "@astrojs/svelte": "^1.0.1",
+    "@astrojs/vercel": "^2.1.0",
+    "@fontsource/outfit": "^4.5.9",
+    "@supabase/supabase-js": "^2.0.0-rc.10",
+    "astro-seo": "^0.6.0",
+    "cookie": "^0.5.0",
+    "random-text-generator": "^3.2.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rxjs": "^7.5.7",
+    "svelte": "^3.50.1",
+    "tailwindcss": "^3.1.8",
+    "tslib": "^2.4.0",
+    "txtgen": "^3.0.4",
+    "unique-names-generator": "^4.7.1",
+    "zone.js": "^0.11.8"
+  }
+}

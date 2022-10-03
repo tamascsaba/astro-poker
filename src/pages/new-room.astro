@@ -1,0 +1,9 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CreateRoom from '../components/CreateRoom.jsx';
+
+---
+
+<Layout title="Create new room">
+    <CreateRoom client:only="react" />
+</Layout>

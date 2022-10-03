@@ -1,0 +1,16 @@
+<h3>Players:</h3>
+<div class="card-deck flex justify-center">
+    <div *ngFor="let player of players | async; let i = index" class="card player-card {{ i % 2 ? 'heart' : 'spade'}}">
+        {{ player || 'Unknown player'}}
+    </div>
+</div>
+
+<div *ngIf="!player" class="modal">
+    <div class="modal-content">
+        <div class="pb-2">First step:</div>
+        <input class="input-field" #nameInput type="text" placeholder="Please give your name"/>
+        <div class="pt-5 text-center relative">
+            <button class="btn"type="button" (click)="play(nameInput.value)">Lets Play!</button>
+        </div>
+    </div>
+</div>

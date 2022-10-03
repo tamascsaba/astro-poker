@@ -1,0 +1,9 @@
+<h3>Your cards:</h3>
+<div class="card-container ">
+    <div class="pick-card text-center">Pick your card 👇</div>
+    <div class="card-deck flex justify-center">
+        <div *ngFor="let card of cards; let i = index" class="card {{ i % 2 ? 'heart' : 'spade'}}">
+            {{ card }}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+---
+import Layout from '../layouts/Layout.astro';
+import {PlayersComponent} from '../components/players';
+import {CardsComponent} from '../components/cards';
+import Issue from '../components/Issue.svelte';
+
+---
+
+<Layout title="Create new room">
+    <PlayersComponent client:only="@analogjs/astro-angular" />
+    <CardsComponent client:only="@analogjs/astro-angular" />
+</Layout>

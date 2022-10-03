@@ -1,0 +1,76 @@
+$color: #c0c0c0;
+$background: #f0f0f0;
+$gutter: 10px;
+$font-size: 16px;
+
+$card-background: #fff;
+$card-padding: 4px;
+$card-width: 96px;
+$card-height: 146px;
+$card-color-red: #e44145;
+$card-color-black: #252525;
+$card-symbol-size: 40px;
+
+.card {
+	position: relative;
+	display: inline-flex;
+    justify-content: center;
+    align-items: center;
+	width: $card-width;
+	height: $card-height;
+	font: $font-size 'Trebuchet MS';
+
+	margin: $gutter;
+	border-radius: $card-padding;
+	background: $card-background;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+
+	&:before,
+	&:after {
+		content: attr(value);
+		position: absolute;
+		width: 12px;
+		text-align: center;
+		letter-spacing: -2px;
+	}
+
+	&:before {
+		top: $card-padding;
+		left: $card-padding;
+	}
+
+	&:after {
+		bottom: $card-padding;
+		right: $card-padding;
+		transform: rotate(180deg)
+	}
+
+    &:hover {
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    &.active {
+		background-color: rgba(27, 27, 234, 0.5);
+	}
+
+    // ♦ ♣
+
+	&.heart {
+		color: $card-color-red;
+
+		&:before,
+		&:after {
+			content: attr(value) ' ♥';
+		}
+	}
+
+	&.spade {
+		color: $card-color-black;
+
+		&:before,
+		&:after {
+			content: attr(value) ' ♠';
+		}
+	}
+}

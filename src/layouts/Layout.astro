@@ -1,0 +1,44 @@
+---
+import { SEO } from "astro-seo";
+
+export interface Props {
+    title: string;
+}
+
+const { title } = Astro.props as Props;
+
+import '../styles/globals.scss';
+import '@fontsource/outfit/300.css';
+import '@fontsource/outfit/400.css';
+import '@fontsource/outfit/700.css';
+
+import Counter from '../components/Counter.svelte';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+    <meta name="generator" content={Astro.generator}/>
+    <title>{title}</title>
+
+    <SEO
+        title="Planning poker with 🧑‍🚀"
+        description="Planning poker application built with Astro (react, svelte, angular) and Supabase authentication, deployed to Vercel"
+    />
+</head>
+<body>
+<div class="container mx-auto px-4 font-outfit">
+    <div class="flex flex-col items-center pt-20 pb-12 prose-a:text-blue-800 prose-blockquote:text-gray-500 prose-blockquote:border-l prose-blockquote:border-l-4 prose-blockquote:border-emerald-500 prose-blockquote:font-light">
+        <h1 class="title">Planning poker with <Counter client:idle /></h1>
+        <div class="pt-8 w-full">
+            <article class="prose-lg">
+                <slot/>
+            </article>
+        </div>
+    </div>
+</div>
+</body>
+</html>

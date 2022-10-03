@@ -1,0 +1,29 @@
+@use "card";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .btn {
+      @apply
+        py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg
+        shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2
+        focus:ring-blue-400 focus:ring-opacity-75;
+      color: white !important;
+    }
+
+    .input-field {
+      @apply
+        shadow appearance-none border rounded w-full py-2 px-3
+        text-gray-700 leading-tight focus:outline-none;
+    }
+
+    .title {
+      @apply text-3xl md:text-5xl select-none whitespace-pre font-mono
+    }
+
+    li {
+      list-style: disc;
+    }
+  }

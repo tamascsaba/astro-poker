@@ -1,0 +1,49 @@
+$card-width: 180px;
+$card-height: 122px;
+
+.player-card {
+	width: $card-width;
+	height: $card-height;
+
+    &:hover {
+        cursor: initial;
+        background: initial;
+    }
+
+    &.heart {
+		&:before,
+		&:after {
+            transform: rotate(90deg);
+            content: attr(value) ' 🧑‍🚀';
+		}
+	}
+
+    &.spade {
+		&:before,
+		&:after {
+            transform: rotate(90deg);
+            content: attr(value) ' 🧑‍🚀';
+		}
+	}
+}
+
+.modal {
+    position: fixed;
+    background-color: rgba(135, 135, 135, 0.5);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.modal-content {
+    width: 400px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2em;
+    background: white;
+    border-radius: 4px;
+}
