@@ -9,8 +9,6 @@ import {
 import {supabase} from '../api/supabase.ts';
 import Spinner from './Spinner';
 
-console.log(supabase);
-
 const defaultName = uniqueNamesGenerator({
     dictionaries: [colors, adjectives, animals],
     separator: '-'
@@ -19,6 +17,7 @@ const defaultName = uniqueNamesGenerator({
 export default function CreateRoom() {
     const [roomName, setRoomName] = useState(defaultName);
     const [status, setStatus] = useState({error: '', success: false, isLoading: false});
+
 
     const handleSendLink = async () => {
         setStatus({error: '', success: false, isLoading: true})
@@ -47,7 +46,7 @@ export default function CreateRoom() {
             <div>
                 <input
                     disabled={status.isLoading}
-                    className="input-field" type="text" placeholder="Email" value={roomName}
+                    className="input-field" type="text" placeholder="Your room name" id="room" value={roomName}
                     onChange={(v) => setRoomName(v.target.value)}/>
                 {status.error ? <div className="text-sm text-red-400">{status.error}</div> : null}
             </div>
